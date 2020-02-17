@@ -1,0 +1,5 @@
+serek          0				 0 1
+super 0 0 0
+rower 0 2 0
+krowa 0 4 0
+l 4 1 1
