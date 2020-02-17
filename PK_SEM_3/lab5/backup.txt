@@ -1,0 +1,148 @@
+
+czas nadania: Sun Dec 15 22:49:04 2019
+id odbiorcy: 0, nazwa odbiorcy: A, id nadawcy: 1, nazwa nadawcy: B
+Tresc: siema1
+***********
+czas nadania: Sun Dec 15 22:49:04 2019
+id odbiorcy: 0, nazwa odbiorcy: A, id nadawcy: 2, nazwa nadawcy: C
+Tresc: yo1
+***********
+
+czas nadania: Sun Dec 15 22:49:12 2019
+id odbiorcy: 0, nazwa odbiorcy: A, id nadawcy: 1, nazwa nadawcy: B
+Tresc: siema1
+***********
+czas nadania: Sun Dec 15 22:49:12 2019
+id odbiorcy: 0, nazwa odbiorcy: A, id nadawcy: 2, nazwa nadawcy: C
+Tresc: yo1
+***********
+
+czas nadania: Sun Dec 15 22:51:22 2019
+id odbiorcy: 0, nazwa odbiorcy: A, id nadawcy: 1, nazwa nadawcy: B
+Tresc: siema1
+***********
+czas nadania: Sun Dec 15 22:51:22 2019
+id odbiorcy: 0, nazwa odbiorcy: A, id nadawcy: 2, nazwa nadawcy: C
+Tresc: yo1
+***********
+
+
+czas nadania: Sun Dec 15 22:49:04 2019
+id odbiorcy: 1, nazwa odbiorcy: B, id nadawcy: 0, nazwa nadawcy: A
+Tresc: no hej2
+***********
+czas nadania: Sun Dec 15 22:49:04 2019
+id odbiorcy: 1, nazwa odbiorcy: B, id nadawcy: 2, nazwa nadawcy: C
+Tresc: yo2
+***********
+
+czas nadania: Sun Dec 15 22:49:12 2019
+id odbiorcy: 1, nazwa odbiorcy: B, id nadawcy: 0, nazwa nadawcy: A
+Tresc: no hej2
+***********
+czas nadania: Sun Dec 15 22:49:12 2019
+id odbiorcy: 1, nazwa odbiorcy: B, id nadawcy: 2, nazwa nadawcy: C
+Tresc: yo2
+***********
+
+czas nadania: Sun Dec 15 22:51:22 2019
+id odbiorcy: 1, nazwa odbiorcy: B, id nadawcy: 0, nazwa nadawcy: A
+Tresc: no hej2
+***********
+czas nadania: Sun Dec 15 22:51:22 2019
+id odbiorcy: 1, nazwa odbiorcy: B, id nadawcy: 2, nazwa nadawcy: C
+Tresc: yo2
+***********
+
+
+czas nadania: Sun Dec 15 22:49:04 2019
+id odbiorcy: 2, nazwa odbiorcy: C, id nadawcy: 0, nazwa nadawcy: A
+Tresc: no hej3
+***********
+czas nadania: Sun Dec 15 22:49:04 2019
+id odbiorcy: 2, nazwa odbiorcy: C, id nadawcy: 1, nazwa nadawcy: B
+Tresc: siema3
+***********
+
+czas nadania: Sun Dec 15 22:49:12 2019
+id odbiorcy: 2, nazwa odbiorcy: C, id nadawcy: 0, nazwa nadawcy: A
+Tresc: no hej3
+***********
+czas nadania: Sun Dec 15 22:49:12 2019
+id odbiorcy: 2, nazwa odbiorcy: C, id nadawcy: 1, nazwa nadawcy: B
+Tresc: siema3
+***********
+
+czas nadania: Sun Dec 15 22:51:22 2019
+id odbiorcy: 2, nazwa odbiorcy: C, id nadawcy: 0, nazwa nadawcy: A
+Tresc: no hej3
+***********
+czas nadania: Sun Dec 15 22:51:22 2019
+id odbiorcy: 2, nazwa odbiorcy: C, id nadawcy: 1, nazwa nadawcy: B
+Tresc: siema3
+***********
+
+
+czas nadania: Sun Dec 15 22:49:04 2019
+id odbiorcy: 3, nazwa odbiorcy: D, id nadawcy: 0, nazwa nadawcy: A
+Tresc: no hej4
+***********
+czas nadania: Sun Dec 15 22:49:04 2019
+id odbiorcy: 3, nazwa odbiorcy: D, id nadawcy: 1, nazwa nadawcy: B
+Tresc: siema4
+***********
+czas nadania: Sun Dec 15 22:49:04 2019
+id odbiorcy: 3, nazwa odbiorcy: D, id nadawcy: 2, nazwa nadawcy: C
+Tresc: yo4
+***********
+
+czas nadania: Sun Dec 15 22:49:12 2019
+id odbiorcy: 3, nazwa odbiorcy: D, id nadawcy: 0, nazwa nadawcy: A
+Tresc: no hej4
+***********
+czas nadania: Sun Dec 15 22:49:12 2019
+id odbiorcy: 3, nazwa odbiorcy: D, id nadawcy: 1, nazwa nadawcy: B
+Tresc: siema4
+***********
+czas nadania: Sun Dec 15 22:49:12 2019
+id odbiorcy: 3, nazwa odbiorcy: D, id nadawcy: 2, nazwa nadawcy: C
+Tresc: yo4
+***********
+
+czas nadania: Sun Dec 15 22:51:22 2019
+id odbiorcy: 3, nazwa odbiorcy: D, id nadawcy: 0, nazwa nadawcy: A
+Tresc: no hej4
+***********
+czas nadania: Sun Dec 15 22:51:22 2019
+id odbiorcy: 3, nazwa odbiorcy: D, id nadawcy: 1, nazwa nadawcy: B
+Tresc: siema4
+***********
+czas nadania: Sun Dec 15 22:51:22 2019
+id odbiorcy: 3, nazwa odbiorcy: D, id nadawcy: 2, nazwa nadawcy: C
+Tresc: yo4
+***********
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
