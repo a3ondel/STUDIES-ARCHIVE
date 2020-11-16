@@ -1,0 +1,53 @@
+﻿<UserControl x:Class="RestaurantManager.Views.WaiterViews.BottomBlockControll"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:RestaurantManager.Views.WaiterViews"
+             mc:Ignorable="d" 
+             d:DesignHeight="180" d:DesignWidth="750"
+>
+    
+    
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        
+        <Button x:Name="CloseTable"
+                Grid.Row="0" Grid.Column="0"
+                Content="Close Table"
+                Style="{StaticResource LogoutButtonStyle}"
+                Background="IndianRed"
+                Command="{Binding CloseTableCommand,FallbackValue='NIE ZBINDOWANY CloseTable COMMAND'}"
+        />
+
+        <Label x:Name="TotalPrice"
+               Grid.Row="0" Grid.Column="1"
+               Content="{Binding TotalPrice,FallbackValue='UNBOUND TotalPrice'}"
+               ContentStringFormat="{}{0:C}"
+               Style="{StaticResource MainLabelStyle}">
+
+        </Label>
+               
+
+
+            <Button x:Name="Bill"
+                Grid.Row="1" Grid.Column="0" 
+                Grid.RowSpan="2" Grid.ColumnSpan="2"
+                Content="Bill"
+                Style="{StaticResource SubmitButtonStyle}"
+                Command="{Binding BillCommand,FallbackValue='NIE ZBINDOWANY BILL COMMAND'}"
+        />
+
+
+
+    </Grid>
+</UserControl>

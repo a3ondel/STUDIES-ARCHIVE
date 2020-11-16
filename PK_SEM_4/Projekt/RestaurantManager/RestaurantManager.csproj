@@ -1,0 +1,324 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{06C9E248-DCDA-431A-86AB-67A6FFB51092}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>RestaurantManager</RootNamespace>
+    <AssemblyName>RestaurantManager</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\CoreCommandBook.cs" />
+    <Compile Include="Core\CoreException.cs" />
+    <Compile Include="Core\CoreViewModel.cs" />
+    <Compile Include="ViewModels\Shared\ManagerViewModels\IManagerVM.cs" />
+    <Compile Include="DB\CountableDB.cs" />
+    <Compile Include="DB\IdentityDB.cs" />
+    <Compile Include="Models\CategoryModel.cs" />
+    <Compile Include="Models\IngredientModel.cs" />
+    <Compile Include="Models\KitchenOrderModel.cs" />
+    <Compile Include="Models\MealModel.cs" />
+    <Compile Include="DB\NameDB.cs" />
+    <Compile Include="DB\NoNameCountableDB.cs" />
+    <Compile Include="Models\OrderModel.cs" />
+    <Compile Include="Models\SharedDataModel.cs" />
+    <Compile Include="Models\SupplyModel.cs" />
+    <Compile Include="Models\TableModel.cs" />
+    <Compile Include="Models\UserModel.cs" />
+    <Compile Include="Utility\CryptoHelper.cs" />
+    <Compile Include="Utility\FileHelper.cs" />
+    <Compile Include="Utility\ListHelper.cs" />
+    <Compile Include="ViewModels\Shared\KitchenViewModels\KitchenControllerViewModel.cs" />
+    <Compile Include="ViewModels\Shared\ManagerViewModels\ManagerViewModel.cs" />
+    <Compile Include="ViewModels\LoginViewModel.cs" />
+    <Compile Include="ViewModels\Shared\KitchenViewModels\KitchenViewModel.cs" />
+    <Compile Include="ViewModels\Shared\ManagerViewModels\ManCatViewModel.cs" />
+    <Compile Include="ViewModels\Shared\ManagerViewModels\ManMealsViewModel.cs" />
+    <Compile Include="ViewModels\Shared\ManagerViewModels\ManSupViewModel.cs" />
+    <Compile Include="ViewModels\Shared\ManagerViewModels\ManUserViewModel.cs" />
+    <Compile Include="ViewModels\Shared\SharedCore\SharedDataViewModel.cs" />
+    <Compile Include="ViewModels\Shared\SharedCore\PrimeSharedViewModel.cs" />
+    <Compile Include="Utility\SharedVmHelper.cs" />
+    <Compile Include="ViewModels\Shared\WaiterViewModels\OrderItemSelection\OrderItemSelectionViewModel.cs" />
+    <Compile Include="ViewModels\Shared\WaiterViewModels\SelectedTable\ActiveOrderControllerViewModel.cs" />
+    <Compile Include="ViewModels\Shared\WaiterViewModels\SelectedTable\BottomBlockViewModel.cs" />
+    <Compile Include="ViewModels\Shared\WaiterViewModels\Category\CategoryViewModel.cs" />
+    <Compile Include="ViewModels\Shared\WaiterViewModels\SelectedTable\SelectedTableViewModel.cs" />
+    <Compile Include="ViewModels\Shared\WaiterViewModels\TableChoice\TableChoiceViewModel.cs" />
+    <Compile Include="ViewModels\Shared\WaiterViewModels\WaiterViewModel.cs" />
+    <Compile Include="Views\KitchenViews\Controller\KitchenControllView.xaml.cs">
+      <DependentUpon>KitchenControllView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\KitchenViews\Items\KitchenOrderItem.xaml.cs">
+      <DependentUpon>KitchenOrderItem.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\KitchenViews\KitchenView.xaml.cs">
+      <DependentUpon>KitchenView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\LoginView.xaml.cs">
+      <DependentUpon>LoginView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ManagerViews\ManagerView.xaml.cs">
+      <DependentUpon>ManagerView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ManagerViews\ManCatView.xaml.cs">
+      <DependentUpon>ManCatView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ManagerViews\ManMealsView.xaml.cs">
+      <DependentUpon>ManMealsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ManagerViews\ManSupView.xaml.cs">
+      <DependentUpon>ManSupView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ManagerViews\ManUserView.xaml.cs">
+      <DependentUpon>ManUserView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\WaiterViews\OrderItemSelection\controller\OrderItemSelectionView.xaml.cs">
+      <DependentUpon>OrderItemSelectionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\WaiterViews\OrderItemSelection\item\OrderSelectionItemControll.xaml.cs">
+      <DependentUpon>OrderSelectionItemControll.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\WaiterViews\SelectedTable\Controllers\ActiveOrderControllerView.xaml.cs">
+      <DependentUpon>ActiveOrderControllerView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\WaiterViews\SelectedTable\Items\BottomBlockControll.xaml.cs">
+      <DependentUpon>BottomBlockControll.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\WaiterViews\Category\Controllers\CategoryControllerView.xaml.cs">
+      <DependentUpon>CategoryControllerView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\WaiterViews\Category\items\CategoryItemControll.xaml.cs">
+      <DependentUpon>CategoryItemControll.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\WaiterViews\SelectedTable\Items\OrderItemControll.xaml.cs">
+      <DependentUpon>OrderItemControll.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\WaiterViews\SelectedTable\Items\PopupWin.xaml.cs">
+      <DependentUpon>PopupWin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\WaiterViews\SelectedTable\SelectedTableView.xaml.cs">
+      <DependentUpon>SelectedTableView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\WaiterViews\TableChoice\Controller\TableChoiceView.xaml.cs">
+      <DependentUpon>TableChoiceView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\WaiterViews\TableChoice\Items\TableItemControll.xaml.cs">
+      <DependentUpon>TableItemControll.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\WaiterViews\WaiterView.xaml.cs">
+      <DependentUpon>WaiterView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModels\ApplicationViewModel.cs" />
+    <Compile Include="ViewModels\StartUpViewModel.cs" />
+    <Compile Include="Views\ApplicationView.xaml.cs">
+      <DependentUpon>ApplicationView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\StartUpView.xaml.cs">
+      <DependentUpon>StartUpView.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Core\CoreCommand.cs" />
+    <Compile Include="Core\CoreObservableObject.cs" />
+    <Compile Include="Properties\Annotations.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Styles\Basic\AppStyles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Styles\Basic\SharedStyles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Styles\ControlTamplates\LoginControlTamplates.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ApplicationView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\KitchenViews\Controller\KitchenControllView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\KitchenViews\Items\KitchenOrderItem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\KitchenViews\KitchenView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\LoginView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ManagerViews\ManagerView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ManagerViews\ManCatView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ManagerViews\ManMealsView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ManagerViews\ManSupView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ManagerViews\ManUserView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\StartUpView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\WaiterViews\OrderItemSelection\controller\OrderItemSelectionView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\WaiterViews\OrderItemSelection\item\OrderSelectionItemControll.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\WaiterViews\SelectedTable\Controllers\ActiveOrderControllerView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\WaiterViews\SelectedTable\Items\BottomBlockControll.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\WaiterViews\Category\Controllers\CategoryControllerView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\WaiterViews\Category\items\CategoryItemControll.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\WaiterViews\SelectedTable\Items\OrderItemControll.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\WaiterViews\SelectedTable\Items\PopupWin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\WaiterViews\SelectedTable\SelectedTableView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\WaiterViews\TableChoice\Controller\TableChoiceView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\WaiterViews\TableChoice\Items\TableItemControll.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\WaiterViews\WaiterView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

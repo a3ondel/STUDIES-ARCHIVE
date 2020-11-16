@@ -1,0 +1,42 @@
+﻿<UserControl x:Class="RestaurantManager.Views.WaiterViews.SelectedTableView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:RestaurantManager.Views.WaiterViews"
+             mc:Ignorable="d" 
+             d:DesignHeight="744" d:DesignWidth="750">
+    <Border Style="{StaticResource BorderlessBorderStyle}" >
+        <Grid >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="78*"/>
+                <RowDefinition Height="32*"/>
+            </Grid.RowDefinitions>
+
+            <Label x:Name="SelectedTableLabel"  
+            Grid.Row="0" Grid.Column="0"
+            Style="{StaticResource BLabelStyle}"
+            Content="{Binding TableName,FallbackValue='TABLE NAME X FALLBACK'}"/>
+            <!--{Binding SelectedTable.Name,FallbackValue='TABLE X'}-->
+
+            <ContentControl x:Name="ActiveOrdedController" 
+                        Grid.Row="1" Grid.Column="0"
+                        Grid.RowSpan="2"
+                        Style="{StaticResource ContentControlStyle1}"
+                        Content="ACTIVE ORDER VIEWMODEL PLACEHOLDER"/>
+            <!--"{Binding ActiveOrderViewModel,FallbackValue=''"-->
+
+
+            <!--<ContentControl x:Name="BottomBlockController"
+                        Grid.Row="2" Grid.Column="0"
+                        Style="{StaticResource BContentControlStyle}"
+                        Content="Bottom block placeholder"/>-->
+            <!--Content="{Binding BottomBlockViewModel,FallbackValue='BOTTOM BLOCK VIEWMODEL PLACEHOLDER'}"-->
+
+        </Grid>
+    </Border>
+</UserControl>

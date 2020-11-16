@@ -1,0 +1,73 @@
+﻿<UserControl x:Class="RestaurantManager.Views.KitchenViews.KitchenOrderItem"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:RestaurantManager.Views.KitchenViews"
+             mc:Ignorable="d" 
+             d:DesignHeight="150" d:DesignWidth="1280">
+    <Border Style="{StaticResource BBorderStyle}"  Height="150" >
+        <Grid >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="70"/>
+                <RowDefinition Height="100"/>
+            </Grid.RowDefinitions>
+
+            <Grid Column="0" Grid.Row="0">
+                <Label x:Name="TableName" Content="{Binding TableName,Mode=OneWay,
+                    FallbackValue='TABLE X'}" 
+                       Foreground="AliceBlue"
+                       IsHitTestVisible="False"
+                       VerticalContentAlignment="Center"
+                       HorizontalContentAlignment="Center"
+                       FontSize="40"/>
+
+            </Grid>
+            
+
+
+
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                
+                <Label x:Name="Ammount" 
+                       Grid.Row="0" Grid.Column="1"
+                       Content="{Binding Ammount,Mode=OneWay,
+                            FallbackValue='AmmountFallback'}" 
+                       IsHitTestVisible="False"
+                       VerticalContentAlignment="Center"
+                       HorizontalContentAlignment="Right"
+                       FontSize="30"
+                       Margin="0,0,0,20"
+                       Foreground="Black"
+                       FontWeight="Black"
+                       />
+
+                <Label x:Name="MealName" Margin="0,0,0,20"
+                       Grid.Row="0" Grid.Column="0"
+                       Content="{Binding Order.Meal._Name,Mode=OneWay,
+                            FallbackValue='Mealname'}" 
+                       Foreground="Black"
+                       FontWeight="Black"
+                       IsHitTestVisible="False"
+                       VerticalContentAlignment="Center"
+                       HorizontalContentAlignment="Center"
+                       FontSize="40"/>
+
+
+
+
+
+
+</Grid>
+            <!--Style="{StaticResource AbstractBaseLabelStyle}"-->
+        </Grid>
+    </Border>
+</UserControl>

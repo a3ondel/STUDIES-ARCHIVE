@@ -1,0 +1,135 @@
+﻿<UserControl x:Class="RestaurantManager.Views.ManagerView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:RestaurantManager.Views"
+             mc:Ignorable="d" 
+             
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="6*"/>
+            <ColumnDefinition Width="*"/>
+            
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="15*"/>
+        </Grid.RowDefinitions>
+        <Grid >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                
+            </Grid.ColumnDefinitions>
+
+            <!--Tabs Buttons -->
+            <Button  Grid.Column="0" Content="Categories" Style="{StaticResource ManagerButtonsStyle}"
+                     Command="{Binding GoCategoriesCommand}"/>
+            <Button  Grid.Column="1" Content="Meals" Style="{StaticResource ManagerButtonsStyle}"
+                     Command="{Binding GoMealsCommand}"/>
+            <Button  Grid.Column="2" Content="Supplies" Style="{StaticResource ManagerButtonsStyle}"
+                     Command="{Binding GoSuppliesCommand}"/>
+            <Button  Grid.Column="3" Content="Users Managment" Style="{StaticResource ManagerButtonsStyle}"
+                     Command="{Binding GoUserManagmentCommand}"/>
+            
+
+        </Grid>
+        
+
+
+        <Grid Grid.Row="1" Grid.Column="0">
+           <Grid.RowDefinitions>
+
+               <RowDefinition Height="Auto"/>
+               <RowDefinition Height="*"/>
+           </Grid.RowDefinitions>
+
+            <!--<Grid Grid.Row="0" Grid.Column="0"
+                  Height="40">
+                <Button Style="{StaticResource ManagerButtonsStyle}" 
+                        VerticalContentAlignment="Center"
+                        HorizontalContentAlignment="Center"
+                        IsHitTestVisible="False"
+                        Content="{Binding H}"/>
+
+
+            </Grid>-->
+
+            
+
+        </Grid>
+        <!--Man main view-->
+
+
+
+
+        <Grid Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="100"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+
+
+        </Grid>
+        
+
+        <ContentControl x:Name="ManagerTabsController" Margin="0,2,0,0"
+                        Grid.Row="1" Grid.Column="0"
+                        Content="MANAGER VIEW"
+                        Foreground="AliceBlue"
+                        Style="{StaticResource ContentControlStyle1}"
+                        MinWidth="700"/>
+        
+
+
+        <!--logout-->
+        <Button Grid.Row="0" Grid.Column="1" Content="LOGOUT" 
+                Style="{StaticResource LogoutButtonStyle}"
+                Command="{Binding GoBackCommand}"/>
+
+
+        <!--sidebar options-->
+        <Grid Grid.Row="1" Grid.Column="1"
+              Margin="5,0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="10"/>
+        </Grid.RowDefinitions>
+            <Grid Grid.Row="1" Grid.Column="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="10"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="10"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Button Grid.Row="0" Grid.Column="0" Content="ADD" 
+                        Style="{StaticResource SubmitButtonStyle}"
+                        Command="{Binding OptAddCommand,Mode=OneWay,
+                    UpdateSourceTrigger=PropertyChanged}"/>
+
+                <Button Grid.Row="2" Grid.Column="0" Content="EDIT" 
+                        Style="{StaticResource ManagerButtonsStyle}"
+                        Background="LightSkyBlue"
+                        Command="{Binding OptEditCommand,Mode=OneWay,
+                    UpdateSourceTrigger=PropertyChanged}"/>
+
+                <Button Grid.Row="4" Grid.Column="0" Content="DELETE" 
+                        Style="{StaticResource LogoutButtonStyle}"
+                        Background="OrangeRed"
+                        Command="{Binding OptDelCommand,Mode=OneWay,
+                    UpdateSourceTrigger=PropertyChanged}"/>
+
+                
+                <!--side bar buttons-->
+
+
+            </Grid>
+        </Grid>
+    </Grid>
+</UserControl>

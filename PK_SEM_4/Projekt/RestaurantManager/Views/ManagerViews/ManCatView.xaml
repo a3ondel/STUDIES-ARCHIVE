@@ -1,0 +1,29 @@
+﻿<UserControl x:Class="RestaurantManager.Views.ManagerViews.ManCatView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:RestaurantManager.Views.ManagerViews"
+             mc:Ignorable="d" 
+             d:DesignHeight="720" d:DesignWidth="1280">
+    <Grid Background="Transparent">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+
+        <!--Head text-->
+        <Grid Grid.Row="0" Grid.Column="0"
+              Background="Aqua" Opacity="0.7">
+            <Label VerticalContentAlignment="Center"
+                   HorizontalContentAlignment="Center"
+                   FontSize="60"
+                   Content="Categories"/>
+        </Grid>
+
+       
+
+    </Grid>
+</UserControl>

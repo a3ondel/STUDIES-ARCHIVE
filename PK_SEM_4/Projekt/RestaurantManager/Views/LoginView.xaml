@@ -1,0 +1,85 @@
+﻿<UserControl x:Class="RestaurantManager.Views.LoginView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:RestaurantManager.Views"
+             xmlns:viewModels="clr-namespace:RestaurantManager.ViewModels"
+             mc:Ignorable="d" 
+             Height="auto" Width="auto"
+             d:DesignHeight="550" d:DesignWidth="735" d:DataContext="{d:DesignData LoginViewModel}">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition Height="10"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition  Width="*"/>
+            <ColumnDefinition Width="16*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+
+        <Border x:Name="MainBorder" Style="{StaticResource LoginBorderStyle}"
+                Grid.Row="1" Grid.Column="1"
+                Grid.RowSpan="3">
+            <Grid >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="3*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+
+                <StackPanel Orientation="Vertical"
+                        Grid.Column="1">
+
+                    <TextBlock x:Name="HeaderTextBlock"
+                           Text="LOGIN" 
+                           Style="{StaticResource LoginTextStyle}" FontFamily="Myanmar Text"
+                           TextWrapping="Wrap"
+                           TextAlignment="Center"
+                           LineStackingStrategy="MaxHeight" LineHeight="30"/>
+
+                    <Label x:Name="UsernameLabel" Content="Username" Style="{StaticResource LoginLabelStyle}"/>
+
+
+                    <TextBox x:Name="UserNameTextBox" Height="80" Validation.ErrorTemplate="{StaticResource ErrorTemplate}"
+                         FontSize="34"
+                         HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
+                         Text="{Binding UserName,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged
+                        ,ValidatesOnDataErrors=True}" />
+
+                    <Label Content="Password" Style="{StaticResource LoginLabelStyle}" />
+
+                    <PasswordBox x:Name="PasswordBox"  Height="80" 
+                             HorizontalContentAlignment="Center" VerticalContentAlignment="Center" 
+                             FontSize="34" >
+                    </PasswordBox>
+
+                    <Grid >
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Button x:Name="GoBackButton" Content="Go Back"  MinHeight="50" Margin="0,10,10,0"
+                                Command="{Binding GoBackCommand}"
+                                Style="{StaticResource GoBackButtonStyle}"/>
+
+                        <Button x:Name="LoginButton" 
+                                Grid.Column="1"
+                                Content="Login"  MinHeight="50"  Margin="10,10,0,0"
+                                Command="{Binding InSubmitButtonCommand}"
+                                Style="{StaticResource SubmitButtonStyle}"/>
+
+                    </Grid>
+                </StackPanel>
+            </Grid>
+
+        </Border>
+
+    </Grid>
+</UserControl>
