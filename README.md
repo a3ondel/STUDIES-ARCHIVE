@@ -1,2 +1,2 @@
 # STUDIA-ARCHIVE
-Its an archive for all my repos of Computer Science lessons (SEMESTER 1 - 4)
+It's an archive for all my repositories of Computer Science lessons (SEMESTER 1 - 4)
