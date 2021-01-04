@@ -17,4 +17,4 @@
 **[last edit] 10.01.2020**
 
 ## Author
- * [Adam Trznadel](https://github.com/emexajt)
+ * [Adam Trznadel](https://github.com/a3ondel)
